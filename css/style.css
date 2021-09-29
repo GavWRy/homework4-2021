@@ -24,53 +24,112 @@ caption{
 
 /*END STARTER CODE*/
 
+
+
 body{
+  font-family: Andika, sans-serif;
   color: #000000;
   font-size: 16px;
   margin: 1.2em;
-  background-size: cover ;
+  background-color: #DDDDDD; 
+  background-image: url("../images/pigeon-background.JPEG");
+  background-size: cover;
   background-position: center;
+  
 
   /*Req 1*/
 }
 
 h1{
   color: #c12258;
-  font-size: 2em;
+  font-size: 32px;
+  text-align: center;
+  line-height: 32px;
 
   /*Req 2*/
 }
 
 p{
-  
+  padding: 15px, 0px, 0px, 0px;
 }
 
 a{
-  
+  color: #B21F50; /*#C12258; /*, or #B92751*/
+  text-decoration: wavy;
 }
 
 /*Req 5*/
 /*Add selector and rule here*/
-
-
-
-td{
-  
+:focus{
+  border-style: dashed;
+  border-width: 3px;
+  border-color: #417243;
 }
 
 
+td{
+  text-align:center;
+  border: 2px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+}
+
+/* The table
+Should be centered on a large screen
+Should have a specialized border with:
+5px black border around the exterior (provided in starter code).
+50px radius rounded exterior corners ** 
+The rounded corners are a challenge problem - you are expected to 
+struggle on this component.
+It is fine if there is some white space between the border and the
+ table cells at the edge.
+HINT: You will need to round the corners of the table AND the 
+corner cells. How can you use pseudeoclasses to make sure the 
+outer cells are rounded no matter how big the table is?   
+(You need extra code to make sure only the *outside* borders 
+are rounded, not all of the cells.)
+
+Table elements should have the following styles:
+Table cells have centered text with a 2px black border on only one side
+ (the top), and 10px padding on all sides.
+Column headers are always at least 125px wide, with 10px of padding. 
+Column header text is white, centered horizontally and vertically, 
+and uppercase with a dark red background (#7e0825).
+Row headers have a consistent 2px black border.  Only use the border 
+property on the sides that aren’t touching an existing border. 
+(See example picture.)
+Every odd numbered table row has a transparent background.
+Every even numbered table row has a grey background (#D1D1D1)
+Hovering over a row changes it to the same background color as 
+the column header, but with an alpha transparency of .25 so 
+don’t use hexadecimal. */
+
 .colhead{
   color: #FFFFFF;
+  padding: 10px;
+  color: white;
+  align-items: center;
+  align-self: center;
+  background-color: #7e0825;
+  
 
 }
 
 .rowhead{
-
+  border-width: 2px;
+  border-color: black;
+  if row is odd{
+    background-color: transparent;
+  }
+  if row is even{
+    background-color: #D1D1D1;
+  }
 }
 
 
 table{
-    border: 5px solid #000000;
+  align-self: center;
+  border: 5px solid #000000;
+
 }
 
 /* I gave you the selector, but not the property-value pair. 
@@ -82,7 +141,8 @@ thead tr:first-child th:first-child{}
 
 
 footer{
-  width:100%;
+  min-height: 75px;
+  width: 100%;
   background:#000000;
   text-align:center;
   color: #FFFFFF;
