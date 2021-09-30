@@ -33,6 +33,7 @@ body{
   margin: 1.2em;
   background-color: #DDDDDD; 
   background-image: url("../images/pigeon-background.JPEG");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   
@@ -112,8 +113,8 @@ don’t use hexadecimal. */
   align-items: center;
   align-self: center;
   background-color: #7e0825;
-  
-
+  min-width: 125px;
+  text-transform: uppercase;
 }
 
 .rowhead{
@@ -123,8 +124,8 @@ don’t use hexadecimal. */
 
 
 table{
-  position: static;
-  align-self: center;
+  margin-left: auto;
+  margin-right:auto;
   border: 5px solid #000000;
   border-radius: 50px;
 
@@ -185,9 +186,13 @@ tbody tr:last-child{
 
 
 
+
+
 footer{
   position: fixed;
   min-height: 75px;
+  left: 0;
+  bottom: 0;
   width: 100%;
   background:#000000;
   text-align:center;
