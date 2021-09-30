@@ -55,21 +55,22 @@ p{
 
 a{
   color: #B21F50; /*#C12258; /*, or #B92751*/
-  text-decoration: wavy;
+  text-decoration: underline wavy;
 }
 
 /*Req 5*/
 /*Add selector and rule here*/
 :focus{
-  border-style: dashed;
+  border: 3px dashed #417243;
+  /* border-style: dashed;
   border-width: 3px;
-  border-color: #417243;
+  border-color: #417243; */
 }
 
 
 td{
   text-align:center;
-  border: 2px 0px 0px 0px;
+  border-top: solid 2px black;
   padding: 10px 10px 10px 10px;
 }
 
@@ -90,7 +91,7 @@ are rounded, not all of the cells.)
 
 Table elements should have the following styles:
 Table cells have centered text with a 2px black border on only one side
- (the top), and 10px padding on all sides.
+ (the top), and 10px padding on all sides. 
 Column headers are always at least 125px wide, with 10px of padding. 
 Column header text is white, centered horizontally and vertically, 
 and uppercase with a dark red background (#7e0825).
@@ -104,6 +105,7 @@ the column header, but with an alpha transparency of .25 so
 don’t use hexadecimal. */
 
 .colhead{
+  position: static;
   color: #FFFFFF;
   padding: 10px;
   color: white;
@@ -117,30 +119,74 @@ don’t use hexadecimal. */
 .rowhead{
   border-width: 2px;
   border-color: black;
-  if row is odd{
-    background-color: transparent;
-  }
-  if row is even{
-    background-color: #D1D1D1;
-  }
 }
 
 
 table{
+  position: static;
   align-self: center;
   border: 5px solid #000000;
+  border-radius: 50px;
 
 }
 
+/* .colhead:first-child{
+  border-radius: 50px 0px 0px 0px;
+}
+.colhead:last-child{
+  border-radius: 0px 50px 0px 0px;
+} */
+
+
 /* I gave you the selector, but not the property-value pair. 
 You can use Inspect Element or your editor to find selectors. */
-thead tr:first-child th:first-child{}
+thead tr:first-child th:first-child{
+  border-top-left-radius: 50px;
+}
+
 
 /*Add selectors and rules here*/
+
+tbody tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #D1D1D1;
+}
+
+tbody tr:hover {
+  background: rgba(126, 8, 37, 0.25);
+}
+
+th{
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  vertical-align: middle;
+}
+
+thead tr:last-child th:last-child{
+  border-top-right-radius: 50px;
+}
+
+tbody tr:last-child th:first-child{
+  border-bottom-left-radius: 50px;
+}
+
+tbody tr:last-child td:last-child{
+  border-bottom-right-radius: 50px;
+}
+
+tbody tr:last-child{
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
 
 
 
 footer{
+  position: fixed;
   min-height: 75px;
   width: 100%;
   background:#000000;
