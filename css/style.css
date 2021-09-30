@@ -178,10 +178,10 @@ tbody tr:last-child td:last-child{
   border-bottom-right-radius: 50px;
 }
 
-tbody tr:last-child{
+/* tbody tr:last-child{
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-}
+} */
 
 
 
